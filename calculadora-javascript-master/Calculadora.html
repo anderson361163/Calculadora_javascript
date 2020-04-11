@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/calculadora.css">
+    <link href=>
+    <!-- Adicione aqui seus scripts para testar -->
+</head>
+<body>
+
+    <script type="text/javascript">
+        function PegarEMostrar(){
+            var a = document.getElementById('numero').value;
+            console.log('O que é isso: ');
+            console.log('O que é isso: ' + a);
+        }
+    </script>
+    <div class="calculadora">
+        <input type="text" id="resultado" />
+
+        <button class="numero" onclick="PegarEMostrar">9</button>
+        <button class="numero" onclick="PegarEMostrar">8</button>
+        <button class="numero" onclick="PegarEMostrar">7</button>
+        <button class="operacao somar" onclick="PegarEMostrar">+</button>
+        
+        <button class="numero" onclick="PegarEMostrar">6</button>
+        <button class="numero" onclick="PegarEMostrar">5</button>
+        <button class="numero" onclick="PegarEMostrar">4</button>
+        <button class="operacao subtrair" onclick="PegarEMostrar">-</button>
+        
+        <button class="numero" onclick="PegarEMostrar">3</button>
+        <button class="numero" onclick="PegarEMostrar">2</button>
+        <button class="numero" onclick="PegarEMostrar">1</button>
+        <button class="operacao multiplicar" onclick="PegarEMostrar">*</button>
+        
+        <button class="numero" onclick="PegarEMostrar">0</button>
+        <button class="numero" onclick="PegarEMostrar">.</button>
+        <button class="resultar">=</button>
+        <button class="operacao dividir" onclick="PegarEMostrar">/</button>
+    </div>
+
+</body>
+</html>

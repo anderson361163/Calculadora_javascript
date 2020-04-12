@@ -19,32 +19,54 @@
         const sub = '-';
         const multiplicacao = '*';
         const divisao = '/';
+        const decimal = '.';
 
 
     function PegarEMostrar(num){
       
       var elemento = '';
       var operador1 = '';
+      var digito1 = 0;
       numero = num.textContent;
 
-      if((numero == soma) ||
+      if(numero == decimal){
+        console.log('Sou um decimal')
+                
+        var o = document.getElementById('resultado').value
+
+        elemento = o.concat(numero)
+
+        console.log(elemento)
+        document.getElementById('resultado').value = elemento
+
+
+      }else if((numero == soma) ||
         (numero == sub) ||
         (numero == multiplicacao) ||
         (numero == divisao)){
             
+            var o = document.getElementById('resultado').value
             console.log('Sou um operador')
-            elemento = segundoNumero.concat(numero)
-            
+            console.log('o que tem dentro de vai: ' + elemento)
+            console.log('eu sou o valor que tem dentro de o: ' + o)
+            digito1 = o;
 
+            console.log('Qual o primeiro digito: ' + digito1)
+
+            elemento = o.concat(numero)
+            
+            
             document.getElementById('resultado').value = elemento
 
 
 
     }else{
-        console.log('o que tem dentro de vai: ' + segundoNumero)
+        console.log('Sou um numero')
+        console.log('o que tem dentro de segundoNumero: ' + segundoNumero)
+        segundoNumero = document.getElementById('resultado').value
         elemento = segundoNumero.concat(numero);
-        segundoNumero = numero;
-        console.log('Porque nãoe estou indo? ' + elemento)
+        //segundoNumero = numero;
+        console.log('Não sei ' + elemento)
         document.getElementById('resultado').value = elemento
 
     }

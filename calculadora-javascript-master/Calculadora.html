@@ -11,15 +11,45 @@
 
 
     <script type="text/javascript">
-
         
-    function PegarEMostrar(num){
-    
-      numero = num.textContent;
-     
-      console.log(numero);
+        var segundoNumero = ''; //Depois temos que converter isso em uma lista para que n numeros possam ser inseridos
+        
+        //OPERADORES DA CALCULADORA
+        const soma = '+'; 
+        const sub = '-';
+        const multiplicacao = '*';
+        const divisao = '/';
 
-      document.getElementById('resultado').value = numero
+
+    function PegarEMostrar(num){
+      
+      var elemento = '';
+      var operador1 = '';
+      numero = num.textContent;
+
+      if((numero == soma) ||
+        (numero == sub) ||
+        (numero == multiplicacao) ||
+        (numero == divisao)){
+            
+            console.log('Sou um operador')
+            elemento = segundoNumero.concat(numero)
+            
+
+            document.getElementById('resultado').value = elemento
+
+
+
+    }else{
+        console.log('o que tem dentro de vai: ' + segundoNumero)
+        elemento = segundoNumero.concat(numero);
+        segundoNumero = numero;
+        console.log('Porque nãoe estou indo? ' + elemento)
+        document.getElementById('resultado').value = elemento
+
+    }
+
+      
       
       
     }

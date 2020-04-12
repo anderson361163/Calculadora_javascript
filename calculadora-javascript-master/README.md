@@ -31,6 +31,8 @@ Strings no JavaScript são como vetores, podemos acessar letra a letra pelo seu 
 
 Algumas funções podem ser interessantes para o exercício (pesquisem!):
  * isNaN(): diz se uma expressão é um número ou não.
+ Pesquisa
+ 
  * parseInt(): transforma uma String em inteiro.
  * parseFloat(): transforma uma String em um decimal.
  * substring(): devolve parte de uma String, baseado no índice passado.

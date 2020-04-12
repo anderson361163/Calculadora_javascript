@@ -20,13 +20,14 @@
         const multiplicacao = '*';
         const divisao = '/';
         const decimal = '.';
-
+        var valida_decimal = false;
 
     function PegarEMostrar(num){
       
       var elemento = '';
       var operador1 = '';
       var digito1 = 0;
+      
       numero = num.textContent;
 
         if(numero == decimal){
@@ -34,11 +35,14 @@
             var o = document.getElementById('resultado').value
 
             if(o != ''){
-                console.log('Sou um decimal')
-                elemento = o.concat(numero)
+                if(valida_decimal == false){
+                console.log('Sou um decimal');
+                elemento = o.concat(numero);
 
-                console.log(elemento)
-                document.getElementById('resultado').value = elemento
+                console.log(elemento);
+                document.getElementById('resultado').value = elemento;
+                valida_decimal = true;
+                }
             }else{
                     document.getElementById('resultado').value = ''
             }

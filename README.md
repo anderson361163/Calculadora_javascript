@@ -30,14 +30,14 @@ Como os scripts precisarão do DOM carregado, não esqueçam de usar a palavra c
 Strings no JavaScript são como vetores, podemos acessar letra a letra pelo seu índice.
 
 Algumas funções podem ser interessantes para o exercício (pesquisem!):
- * isNaN(): diz se uma expressão é um número ou não.
+ * isNaN(): diz se uma expressão é um número ou não.</br>
  A função isNAN() determina se o valor é NaN ou não. Tenha cuidado, o cast em isNaN tem regras para serem observadas. Você pode ficar interessado no Number.isNaN() que foi definido no ECMAScript 6 ou você pode usar typeof para determinar se o valor é Not-A-Number, NaN.
 
- * parseInt(): transforma uma String em inteiro.
+ * parseInt(): transforma uma String em inteiro.</br>
  A função parseInt() analisa um argumento string e retorna um inteiro na base especificada.
 
- * parseFloat(): transforma uma String em um decimal.
+ * parseFloat(): transforma uma String em um decimal.</br>
  A função parseFloat() analisa um argumento string e retorna um número de ponto flutuante.
 
- * substring(): devolve parte de uma String, baseado no índice passado.
+ * substring(): devolve parte de uma String, baseado no índice passado.</br>
  O método substring() retorna um subconjunto de uma string entre um indice e outro, ou até o final da string.

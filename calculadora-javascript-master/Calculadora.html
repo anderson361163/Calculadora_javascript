@@ -34,7 +34,22 @@
                   
             var o = document.getElementById('resultado').value
 
-            if(o != ''){
+            var tamanho_normal = 0;
+            var tamanho_menos1 = 0;
+            var tamanho
+
+            tamanho_normal = o.length
+            tamanho_menos1 = tamanho_normal - 1
+
+            console.log(o.substr(tamanho_menos1,tamanho_normal))
+            console.log('O que devo ser: ' + (o.substr(tamanho_menos1,tamanho_normal) != soma))
+            if((o.substr(tamanho_menos1,tamanho_normal) != soma) &&
+              (o.substr(tamanho_menos1,tamanho_normal) != sub) &&
+              (o.substr(tamanho_menos1,tamanho_normal) != multiplicacao) &&
+              (o.substr(tamanho_menos1,tamanho_normal) != divisao) &&
+              (o.substr(tamanho_menos1,tamanho_normal) != decimal) &&
+              (o != '')           
+            ){
                 if(valida_decimal == false){
                 console.log('Sou um decimal');
                 elemento = o.concat(numero);
@@ -44,7 +59,10 @@
                 valida_decimal = true;
                 }
             }else{
-                    document.getElementById('resultado').value = ''
+                var o = document.getElementById('resultado').value
+                var vazio = ''
+                elemento = o.concat(vazio)
+                document.getElementById('resultado').value = elemento
             }
 
         }else if((numero == soma) ||
@@ -67,6 +85,9 @@
                     
                     
                     document.getElementById('resultado').value = elemento
+
+                    valida_decimal = false;
+
                 }else{
                     document.getElementById('resultado').value = ''
                 }

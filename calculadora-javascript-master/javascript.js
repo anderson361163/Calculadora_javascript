@@ -1,1 +1,15 @@
-arquivo que deverá ser desenvolvido a logica em javascript
+
+
+    function PegarEMostrar(num){
+      var numero = num.innerHTML;
+
+      if(numero == '+' ||
+         numero == '-' ||
+         numero == '*' ||
+          numero == '/'){
+            console.log('Isso é um operador');
+
+      }
+      console.log(numero);
+  }  
+ 

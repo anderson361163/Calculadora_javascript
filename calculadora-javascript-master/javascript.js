@@ -30,9 +30,10 @@
       tamanho_normal = o.length
       tamanho_menos1 = tamanho_normal - 1
     }
-  console.log(o.substr(tamanho_menos1,tamanho_normal))
-  console.log('O que devo ser: ' + (o.substr(tamanho_menos1,tamanho_normal) != soma))
-
+  /**
+   * console.log(o.substr(tamanho_menos1,tamanho_normal))
+   * console.log('O que devo ser: ' + (o.substr(tamanho_menos1,tamanho_normal) != soma))
+*/
     if((o.substr(tamanho_menos1,tamanho_normal) != soma) &&
       (o.substr(tamanho_menos1,tamanho_normal) != sub) &&
       (o.substr(tamanho_menos1,tamanho_normal) != multiplicacao) &&

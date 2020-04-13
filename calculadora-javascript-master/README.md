@@ -14,9 +14,9 @@ A entrega será aceita APENAS por git.
 
 Os seguintes requisitos devem ser levados em consideração para a calculadora:
 
- * Os números ao serem clicados devem aparecer no campo de id *resultado*.
- * As operações também devem adicionar o símbolo no campo de resultado.
- * *NÃO* pode ser incluído uma operação se não houver nenhum número ou se já houver alguma operação no resultado.
+ * Os números ao serem clicados devem aparecer no campo de id *resultado*. (OK)
+ * As operações também devem adicionar o símbolo no campo de resultado. (OK)
+ * *NÃO* pode ser incluído uma operação se não houver nenhum número ou se já houver alguma operação no resultado. (OK)
  * O ponto é utilizado para números decimais.
  * Ao clicar no igual (=), o resultado da operação deve substituir a expressão no campo resultado.
  * Se houver apenas um número no campo, o botão igual não faz nada (mantém o número).

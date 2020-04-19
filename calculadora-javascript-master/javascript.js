@@ -1,22 +1,20 @@
-
+  	//Depois temos que converter isso em uma lista para que n numeros possam ser inseridos
+	
+	//OPERADORES DA CALCULADORA
+	const soma = '+'; 
+	const sub = '-';
+	const multiplicacao = '*';
+	const divisao = '/';
+	const decimal = '.';
+	const resultado = '=';
+	var valida_decimal = false;
+	
+	//PARA OS OPERADORES
+	var opeSoma = false;
+	var opeSub = false;
+	var opeDivisao = false;
         
-         //Depois temos que converter isso em uma lista para que n numeros possam ser inseridos
-        
-        //OPERADORES DA CALCULADORA
-        const soma = '+'; 
-        const sub = '-';
-        const multiplicacao = '*';
-        const divisao = '/';
-        const decimal = '.';
-        const resultado = '=';
-        var valida_decimal = false;
-        
-        //PARA OS OPERADORES
-        var opeSoma = false;
-        var opeSub = false;
-        var opeDivisao = false;
-        
-    function Concatenacao(o,elemento){
+    function Conctenacao(o,elemento){
 
         console.log('Qual valor já temos: ' + elemento)
         console.log('Qual o valor de Entrada: ' + o)
@@ -148,4 +146,3 @@
 
       
     }
-

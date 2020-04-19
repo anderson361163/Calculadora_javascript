@@ -6,34 +6,51 @@
         const multiplicacao = '*';
         const divisao = '/';
         const decimal = '.';
-        const resultado = '=';
+        const igualdade = '=';
         var valida_decimal = false;
         
         //PARA OS OPERADORES
         var opeSoma = false;
         var opeSub = false;
         var opeDivisao = false;
-        
-    function Conctenacao(o,elemento){
 
-        console.log('Qual valor já temos: ' + elemento)
-        console.log('Qual o valor de Entrada: ' + o)
-        digito1 = o;
+        //VALORES A SEREM CALCULADOS
+        var primeiroValor = 0;
+        var segundoValor = 0;
+        var valordaConta = 0;
 
-        console.log('Qual o primeiro digito: ' + digito1)
+    function retiraponto(elemento, tamanho_menos1, tamanho_normal, decimal){
+        if(elemento.substr(tamanho_menos1,tamanho_normal) == decimal){
 
-        elemento = o.concat(numero)
-        
-        
-        document.getElementById('resultado').value = elemento
+            //PEGA TODOS OS NÚMEROS MENOS O .
+            var casasDecimais = o.substr(0,tamanho_menos1)
+            
+            //CONCACTENA OS NÚMEROS MAIS O SIMBOLO DESEJADO
+            elemento = casasDecimais.concat(numero)
+            document.getElementById('resultado').value = elemento
 
+
+
+            //CONVERTE TODA A STRING EM NÚMERO FLOAT NO PRIMEIRO VALOR A SER CALCULADO
+            primeiroValor = parseInt(casasDecimais)
+            console.log('(transformador) O valor do primeiro valor dessa equação: ' + primeiroValor)
+
+            //TORNA
+            valida_decimal = false;
+        }
     }
+
+    
+//    function Conctenacao(o,elemento){
+
+      
+//   }
 
     function PegarEMostrar(num){
       
       var elemento = '';
-      var operador1 = '';
-      var digito1 = 0;
+//    var operador1 = '';
+//    var digito1 = 0;
       
       numero = num.textContent;
 
@@ -65,7 +82,7 @@
                 if(valida_decimal == false){
                     console.log('Sou um decimal');
                     elemento = o.concat(numero);
-
+                    
                     console.log(elemento);
                     document.getElementById('resultado').value = elemento;
                     valida_decimal = true;
@@ -88,7 +105,6 @@
 
                 var tamanho_normal = 0;
                 var tamanho_menos1 = 0;
-                var tamanho
 
                 var o = document.getElementById('resultado').value
 
@@ -98,24 +114,28 @@
                 
                 //QUANDO FOR UM OPERADOR SEM VAZIOS A ESQUERDA ELE EXECUTA ISSO
                 if(o != ''){
-                            
+                           
                     console.log('SOU UM OPERADOR')
-                    Conctenacao(o,elemento)
+                    console.log('Qual valor já temos: ' + elemento)
+                    console.log('Qual o valor de Entrada: ' + o)
+                    digito1 = o;
+            
+                    console.log('Qual o primeiro digito: ' + digito1)
+            
+                    elemento = o.concat(numero)
+                    
+                    retiraponto(elemento,tamanho_menos1, tamanho_normal)
+                    
+                    document.getElementById('resultado').value = elemento
+            
+               //     Conctenacao(o,elemento)
 
                     //SE O ULTIMO OPERADOR DO NÚMERO FOR UM PONTO ELE RETIRA
                     // O PONTO E COLOCA O SIMBOLO CASO CONTRÁRIO VIDA QUE SEGUE
-                    if(o.substr(tamanho_menos1,tamanho_normal) == decimal){
-
-                        //PEGA TODOS OS NÚMEROS MENOS O .
-                        var casasDecimais = o.substr(0,tamanho_menos1)
-
-                        //CONCACTENA OS NÚMEROS MAIS O SIMBOLO DESEJADO
-                        elemento = casasDecimais.concat(numero)
-
-                        document.getElementById('resultado').value = elemento
-
-                        valida_decimal = false;
-                    }
+                    
+                    
+                    primeiroValor = parseFloat(elemento)
+                    console.log('O valor do primeiro valor dessa equação: ' +  primeiroValor)
 
                     valida_decimal = false;
 
@@ -124,7 +144,7 @@
                 }
 
 
-        }else if((numero == resultado)){
+        }else if((numero == igualdade)){
         
             console.log('Sou sinal de igualdade')
         

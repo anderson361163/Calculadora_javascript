@@ -1,3 +1,9 @@
+# INTEGRANTES
+
+Anderson da Silva Machado (RA.: 1902142)
+Priscila da Dalt (Ra.: 1901843)
+
+
 # Exercício de JavaScript
 
 Para treinar o JavaScript de vocês, vamos desenvolver uma calculadora em JavaScript.

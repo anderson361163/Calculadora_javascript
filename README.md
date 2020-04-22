@@ -3,7 +3,7 @@
 SI2B
 <br>
 Anderson da Silva Machado (RA.: 1902142)<br>
-Priscila da Dalt (Ra.: 1901843)<br>
+Priscila da Dalt (RA.: 1901843)<br>
 <br>
 
 # Exercício de JavaScript

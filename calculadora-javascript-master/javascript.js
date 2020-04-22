@@ -73,38 +73,56 @@
 
     function capturaValor2(numero){
         console.log('===============ESTOU DENTRO DA FUNÇÃO capturaValor2=================')
-        var segundodigito = ''
+        var segundodigito = '';
+        var stringquebrada = '';
+        var tmstring = 0;
+        var mm = '';
+        var aa = 1;
 
-        var tamanho = numero.length
+        //var tamanho = numero.length
 
+        console.log('Qual o valor de entrada' + numero)
         console.log('Que operador é esse: ' + exeOpen)
 
-        segundoValor = numero
-        console.log('Qual o primeiro digito em string: ' + numero)
+        segundodigito = primeiroValor + exeOpen
 
+        console.log('Valor da String final é ' + segundodigito)
 
-        //segundoValor = parseFloat(segundoValor)
+        //AQUI É ONDE VAMOS QUEBRAR A STRING
+        stringquebrada = numero.replace(segundodigito,"");
+        console.log('string quebrada: ' + stringquebrada)
+
+        segundoValor = parseFloat(stringquebrada)
+
+        console.log('Qual o valor convertido aqui: ' +  segundoValor)
         console.log('=====================FIM FUNÇÃO CAPTURA capturaValor2=======================\n')
     }
 
     function resultadoIgualdade(exeOpen, primeiroValor, segundoValor){
         console.log('===============ESTOU DENTRO DA FUNÇÃO RESULTADOIGUALDADE=================')
 
+        
+        
         if(exeOpen == soma){
             resultadofinal = primeiroValor + segundoValor
+            document.getElementById('resultado').value = resultadofinal
         }else if(exeOpen == sub){
             resultadofinal = primeiroValor - segundoValor
+            document.getElementById('resultado').value = resultadofinal
         }else if(exeOpen == multiplicacao){
             resultadofinal = primeiroValor * segundoValor
+            document.getElementById('resultado').value = resultadofinal
         }else if((segundoValor == 0) && (exeOpen == divisao)){
             console.log('Usuário burro')
+            document.getElementById('resultado').value = 'ERRO'
         }else if((segundoValor > 0) && (exeOpen == divisao)){
             resultadofinal = primeiroValor / segundoValor
+            document.getElementById('resultado').value = resultadofinal
         }else{
-            console.log('foi para o else')
+            document.getElementById('resultado').value = 'Erro de operação'
         }
         
-        document.getElementById('resultado').value = resultadofinal
+        
 
         console.log('================FIM DENTRO DA FUNÇÃO RESULTADOIGUALDADE==================')
     }
@@ -269,7 +287,7 @@
             console.log('=====================SOU IGUALDADE=======================\n')
             console.log('Sou sinal de igualdade')
             capturaValor2(texto)
-            resultadoIgualdade()
+            resultadoIgualdade(exeOpen, primeiroValor, segundoValor)
             console.log('=====================IGUALDADE===========================\n')
 
         }else{
